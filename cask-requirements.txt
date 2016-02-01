@@ -1,0 +1,17 @@
+google-chrome
+firefox
+spotify
+java
+intellij-idea-ce
+slack
+google-drive
+cocoarestclient
+skype
+atom
+rescuetime
+evernote
+divvy
+google-cloud-sdk
+dockertoolbox
+virtualbox
+vagrant

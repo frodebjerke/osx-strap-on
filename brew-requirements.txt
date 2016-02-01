@@ -1,0 +1,8 @@
+git
+node
+redis
+mysql
+postgresql
+mongodb
+bro
+go

@@ -1,0 +1,5 @@
+[user]
+	name = Frode Bjerke
+	email = frode.bjerke@gmail.com
+[push]
+  default = tracking
