@@ -6,3 +6,9 @@ postgresql
 mongodb
 bro
 go
+awscli
+terraform
+maven
+scala
+sbt
+tree
