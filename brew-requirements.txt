@@ -12,3 +12,5 @@ maven
 scala
 sbt
 tree
+jenv
+ruby
