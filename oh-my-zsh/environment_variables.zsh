@@ -1,9 +1,14 @@
 # GO!
 export GOPATH=~/code/gocode
+
+# BASE PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/usr/sbin:/bin:/sbin
+
+# ADD GO TO PATH
 export PATH="$PATH:$GOPATH/bin"
 
-# Change PATH such that brew works better
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+# ADD GCLOUD STUFFS TO PATH
+export PATH=$PATH:/Users/frodebjerke/code/google-cloud-sdk/bin/
 
 # Add Unacast Scrappy-Scripts https://github.com/unacast/scrappy-scripts
-export PATH=$PATH:~/code/scrappy-scripts
+export PATH=$PATH:~/una/scrappy-scripts
