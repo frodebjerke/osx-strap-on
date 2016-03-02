@@ -1,0 +1,11 @@
+"*":
+  core: {}
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 1
+  welcome:
+    showOnStartup: false
