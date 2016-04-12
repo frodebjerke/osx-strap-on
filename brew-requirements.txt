@@ -14,3 +14,4 @@ sbt
 tree
 jenv
 ruby
+thefuck

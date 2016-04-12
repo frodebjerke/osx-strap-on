@@ -10,8 +10,10 @@ skype
 atom
 rescuetime
 evernote
-divvy
+spectacle
 google-cloud-sdk
 dockertoolbox
 virtualbox
 vagrant
+gitup
+osxfuse

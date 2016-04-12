@@ -30,3 +30,4 @@ alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && kill
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
 alias k=kubectl
+alias fuck=thefuck
