@@ -16,4 +16,3 @@ dockertoolbox
 virtualbox
 vagrant
 gitup
-osxfuse
