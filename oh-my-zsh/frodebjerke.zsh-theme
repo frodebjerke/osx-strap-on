@@ -1,11 +1,21 @@
-local _gcloud_project='%{$fg_no_bold[green]%}gcloud:%{$fg_no_bold[yellow]%} $(current-env)%{$reset_color%}'
-local _kube_auth='%{$fg_no_bold[green]%}kube: %{$fg_no_bold[yellow]%}$(current-cluster)%{$reset_color%}'
+local _gcloud_project=$(echo "$(current-env)" | awk '{split($0,a,"-"); print a[3]}')
+local _kube_auth=$(echo "$(current-cluster)" | awk '{split($0,a,"-"); print a[1]}')
 
-PROMPT='%{$fg[cyan]%}%c$(git_prompt_info)%{$fg_bold[blue]%} $%{$reset_color%} '
+local _project=""
+if [ "$_gcloud_project" = "$_kube_auth" ]; then
+  _project="%{$fg[yellow]%}$_gcloud_project"
+else
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[blue]%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})$fg[yellow]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+  echo $_gcloud_project
+  echo $_kube_auth
+  _project="%{$fg[red]%}$_gloud_project/$_kube_auth"
+fi
 
-RPROMPT="${_gcloud_project} ${_kube_auth} %{$fg[yellow]%} $(time_since_last_commit) %{$reset_color%}"
+local _path="%{$fg[cyan]%}%c"
+local _prompt="$"
+PROMPT='$_project$_path$(git_prompt_info)$_prompt%{$reset_color%} '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
